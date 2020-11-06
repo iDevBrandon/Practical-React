@@ -1,14 +1,14 @@
 import React, { Component } from "react";
 import TOC from "./components/TOC";
 import Content from "./components/Content";
-//import Subject from "./components/Subject";
+import Subject from "./components/Subject";
 import "./App.css";
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      mode: "welcome",
+      mode: "read",
       subject: { title: "web", sub: "World Wide Web" },
       welcome: { title: "welcome", desc: "Hello React" },
       contents: [
@@ -31,27 +31,13 @@ class App extends Component {
 
     return (
       <div className="App">
-        {/* <Subject
+        <Subject
           title={this.state.subject.title}
           sub={this.state.subject.sub}
-        /> */}
-        <header>
-          <h1>
-            <a
-              href="/"
-              onClick={function (e) {
-                e.preventDefault();
-                // this.state.mode = "welcome";
-                this.setState({
-                  mode: "welcome",
-                });
-              }.bind(this)}
-            >
-              {this.state.subject.title}
-            </a>
-          </h1>
-          {this.state.subject.sub}
-        </header>
+          onChangePage={function (e) {
+            this.setState({ mode: "welcome" });
+          }.bind(this)}
+        />
         <TOC data={this.state.contents}></TOC>
         <Content title={_title} desc={_desc} />
       </div>
