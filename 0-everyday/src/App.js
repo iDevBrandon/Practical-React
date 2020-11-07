@@ -2,14 +2,16 @@ import React, { Component } from "react";
 import Subject from "./components/Subject";
 import TOC from "./components/TOC";
 import Control from "./components/Control";
-import Content from "./components/Content";
+import ReadContent from "./components/ReadContent";
+import CreateContent from "./components/CreateContent";
+
 import "./App.css";
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      mode: "read",
+      mode: "create",
       selected_content_id: 2,
       subject: { title: "web", sub: "World Wide Web" },
       welcome: { title: "welcome", desc: "Hello React" },
@@ -22,10 +24,12 @@ class App extends Component {
   }
   render() {
     let _title,
-      _desc = null;
+      _desc,
+      _article = null;
     if (this.state.mode === "welcome") {
       _title = this.state.welcome.title;
       _desc = this.state.welcome.desc;
+      _article = <ReadContent title={_title} desc={_desc} />;
     } else if (this.state.mode === "read") {
       let i = 0;
       while (i < this.state.contents.length) {
@@ -37,6 +41,15 @@ class App extends Component {
         }
         i = i + 1;
       }
+      _article = <ReadContent title={_title} desc={_desc} />;
+    } else if (this.state.mode === "create") {
+      _article = (
+        <CreateContent
+          onSubmit={function (_title, _desc) {
+            // add content to this.state.contents
+          }.bind(this)}
+        ></CreateContent>
+      );
     }
 
     return (
@@ -61,7 +74,7 @@ class App extends Component {
           }.bind(this)}
         ></Control>
 
-        <Content title={_title} desc={_desc} />
+        {_article}
       </div>
     );
   }
