@@ -54,6 +54,12 @@ class App extends Component {
               title: _title,
               desc: _desc,
             });
+            let newContents = Array.from(this.state.contents);
+            newContents.push({
+              id: this.max_content_id,
+              title: _title,
+              desc: _desc,
+            });
             this.setState({
               contents: _contents,
             });
