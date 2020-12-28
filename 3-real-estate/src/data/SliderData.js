@@ -1,3 +1,12 @@
+import ImageOne from "../images/house-1.jpg";
+import ImageTwo from "../images/house-2.jpg";
+import ImageThree from "../images/house-3.jpg";
+import ImageFour from "../images/house-4.jpg";
+import ImageFive from "../images/house-5.jpg";
+import ImageSix from "../images/house-6.jpg";
+import ImageSeven from "../images/house-7.jpg";
+import ImageEight from "../images/house-8.jpg";
+
 export const SliderData = [
   {
     title: "Luxury Villa in Bali, Indonesia",
