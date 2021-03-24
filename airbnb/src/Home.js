@@ -5,8 +5,17 @@ import "./Home.css";
 function Home() {
   return (
     <div className="Home">
-      <h1>Home comp</h1>
       <Banner />
+      <div className="home__section">
+        <Card />
+        <Card />
+        <Card />
+      </div>
+      <div className="home__section">
+        <Card />
+        <Card />
+        <Card />
+      </div>
     </div>
   );
 }
