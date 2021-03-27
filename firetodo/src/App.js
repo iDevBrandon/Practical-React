@@ -21,7 +21,10 @@ function App() {
   const addTodo = (event) => {
     // this will fire off when we click the button
     event.preventDefault();
-    console.log("clicked me");
+
+    db.collection("todos").add({
+      todo: input,
+    });
 
     setTodos([...todos, input]);
     setInput(""); // clear up the input
