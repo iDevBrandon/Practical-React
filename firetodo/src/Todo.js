@@ -1,4 +1,5 @@
 import {
+  Button,
   List,
   ListItem,
   ListItemText,
@@ -24,9 +25,18 @@ const useStyles = makeStyles((theme) => ({
 function Todo({ todo }) {
   const classes = useStyles();
   const [open, setOpen] = useState(false);
+  const [input, setInput] = useState("");
 
-  const handleOpen = () => {
-    setOpen(true);
+  const updateTodo = () => {
+    //update the todo with the new input text
+
+    db.collection("todos").doc(todo.id).set(
+      {
+        todo: input,
+      },
+      { merge: true }
+    );
+    setOpen(false);
   };
 
   return (
@@ -34,7 +44,12 @@ function Todo({ todo }) {
       <Modal open={open} onClose={(e) => setOpen(false)}>
         <div className={classes.paper}>
           <h1>I am a modal</h1>
-          <button onClick={(e) => setOpen(false)}></button>
+          <input
+            placeholder={todo.todo}
+            value={input}
+            onChange={(event) => setInput(event.target.value)}
+          />
+          <Button onClick={updateTodo}>Update me</Button>
         </div>
       </Modal>
       <List className="todo__list">
