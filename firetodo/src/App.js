@@ -4,6 +4,7 @@ import Button from "@material-ui/core/Button";
 import { FormControl, Input, InputLabel } from "@material-ui/core";
 import Todo from "./Todo";
 import db from "./firebase";
+import firebase from "firebase";
 
 function App() {
   const [todos, setTodos] = useState([]);
@@ -12,10 +13,12 @@ function App() {
   // when the app loads, we need to listen to the database and fetch new todos as they get added
   useEffect(() => {
     // this code here ... fires when the app.js loads
-    db.collection("todos").onSnapshot((snapshot) => {
-      console.log(snapshot.docs.map((doc) => doc.data()));
-      setTodos(snapshot.docs.map((doc) => doc.data().todo));
-    });
+    db.collection("todos")
+      .orderBy('timestamp', 'desc')
+      .onSnapshot((snapshot) => {
+        console.log(snapshot.docs.map((doc) => doc.data()));
+        setTodos(snapshot.docs.map((doc) => doc.data().todo));
+      });
   }, []);
 
   const addTodo = (event) => {
@@ -24,6 +27,7 @@ function App() {
 
     db.collection("todos").add({
       todo: input,
+      timestamp: firebase.firestore.FieldValue.serverTimestamp(),
     });
 
     setTodos([...todos, input]);
