@@ -1,13 +1,20 @@
-import { List, ListItem, ListItemText } from "@material-ui/core";
+import { Button, List, ListItem, ListItemText } from "@material-ui/core";
 import "./Todo.css";
 import React from "react";
+import db from "./firebase";
 
 function Todo({ todo }) {
   return (
     <List className="todo__list">
       <ListItem>
-        <ListItemText primary={todo} secondary="Dummy deadline"></ListItemText>
+        <ListItemText
+          primary={todo.todo}
+          secondary="Dummy deadline"
+        ></ListItemText>
       </ListItem>
+      <Button onClick={(event) => db.collection("todos").doc(todo.id).delete()}>
+        DELETE ME
+      </Button>
     </List>
   );
 }
