@@ -90,3 +90,6 @@ Complex UI logic
 Provide lifecycle hooks
 stateful/smart/Container
 
+# JSX
+JavaScript XML (JSX) - Extension to the JavaScript language syntax.
+
