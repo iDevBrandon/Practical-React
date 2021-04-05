@@ -74,4 +74,19 @@ Two types Component
 Stateless functional component vs. Stateful class component
 
 
-#
+# Functional components
+Properties(props) -> JavaScript Function -> HTML(JSX)
+
+FUNCTIONAL
+Adventages of Functional comp
+Absence of 'this' keyword
+Solution without using state 
+Stateless/Dumb/ presentational 
+
+CLASS
+More feature rich 
+Maintain their own private data - state
+Complex UI logic 
+Provide lifecycle hooks
+stateful/smart/Container
+
