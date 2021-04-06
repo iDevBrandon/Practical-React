@@ -57,3 +57,39 @@ https://www.youtube.com/watch?v=sKs9FiAHSN4
 
 4-wildfire-tracker
 https://youtu.be/ontX4zfVqK8
+
+
+What is React?
+Open source library for building UI
+
+Create react-app
+npx : npm package runner
+npm : 
+
+
+# components 
+Header / SideNav / Main / Footer 
+
+Two types Component  
+Stateless functional component vs. Stateful class component
+
+
+# Functional components
+Properties(props) -> JavaScript Function -> HTML(JSX)
+
+FUNCTIONAL
+Adventages of Functional comp
+Absence of 'this' keyword
+Solution without using state 
+Stateless/Dumb/ presentational 
+
+CLASS
+More feature rich 
+Maintain their own private data - state
+Complex UI logic 
+Provide lifecycle hooks
+stateful/smart/Container
+
+# JSX
+JavaScript XML (JSX) - Extension to the JavaScript language syntax.
+
