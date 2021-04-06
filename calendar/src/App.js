@@ -1,13 +1,13 @@
 import React from "react";
 import "./index.css";
 import Todo from "./components/Todo/Todo";
-import CalendarDate from "./components/CalendarDate/CalendarDate";
+import DatePicker from "./components/DatePicker/DatePicker";
 
 const App = () => {
   return (
     <div className="container">
       <Todo />
-      <CalendarDate />
+      <DatePicker />
     </div>
   );
 };

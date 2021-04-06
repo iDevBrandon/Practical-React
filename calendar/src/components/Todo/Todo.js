@@ -1,8 +1,9 @@
 import React from "react";
 import "./Todo.styles.js";
+import { FormContainer } from "./Todo.styles";
 
 const Todo = () => {
-  return <div>Todo</div>;
+  return <FormContainer>Todo</FormContainer>;
 };
 
 export default Todo;
