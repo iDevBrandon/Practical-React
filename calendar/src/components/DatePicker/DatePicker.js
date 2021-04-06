@@ -11,8 +11,9 @@ const DatePicker = () => {
 
   return (
     <div>
-      <Calendar value={date} onChange={onChange} />
-      {date.toString()}
+      <Calendar selectRange value={date} onChange={onChange} />
+      <p>{date.toString()}</p>
+      {/* <p>Date choice: {date.toLocaleDateString()}</p> */}
     </div>
   );
 };
