@@ -3,13 +3,14 @@ import { Card } from "../UI/Card/Card.style";
 import { UserListItem } from "../UserListItem/UserListItem.style";
 import { UserListContainer } from "./UserList.style";
 
-const UserList = () => {
+const UserList = (props) => {
   return (
     <div>
       <Card>
         <UserListContainer>
-          <UserListItem />
-      
+          {props.users.map((user) => {
+            <UserListItem>{user.age}</UserListItem>;
+          })}
         </UserListContainer>
       </Card>
     </div>

@@ -1,7 +1,7 @@
 import React from "react";
 
-const UserListItem = () => {
-  return <li>adasdfasdfasdfsf</li>;
+const UserListItem = (props) => {
+  return <li>{props.children}</li>;
 };
 
 export default UserListItem;
