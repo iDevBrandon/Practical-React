@@ -9,8 +9,7 @@ const UserList = () => {
       <Card>
         <UserListContainer>
           <UserListItem />
-          <UserListItem />
-          <UserListItem />
+      
         </UserListContainer>
       </Card>
     </div>
