@@ -1,16 +1,14 @@
-import React, { useState } from "react";
-import "./index.css";
-import Todo from "./components/Todo/Todo";
-import DatePicker from "./components/DatePicker/DatePicker";
+import NewCalendar from "./components/NewCalendar/NewCalendar";
+import Todos from "./components/Todos/Todos";
 
-const App = () => {
-  const [word, setWord] = useState("Parent");
+function App() {
   return (
-    <div className="container">
-      <Todo word={word} />
-      <DatePicker changeWord={(word) => setWord(word)} />
+    <div className="App">
+      <h2>Let's start</h2>
+      <NewCalendar />
+      <Todos />
     </div>
   );
-};
+}
 
 export default App;
