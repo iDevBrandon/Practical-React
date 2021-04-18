@@ -7,7 +7,7 @@ import {
   UserFormLabel,
 } from "./UserForm.style";
 
-const UserForm = () => {
+const UserForm = (props) => {
   const [enteredUsername, setEnteredUsername] = useState("");
   const [enteredAge, setEnteredAge] = useState("");
 
@@ -29,6 +29,8 @@ const UserForm = () => {
       return;
     }
     console.log(enteredUsername, enteredAge);
+    // lift up the state to App
+    props.onAddUser(enteredUsername, enteredAge);
     setEnteredUsername("");
     setEnteredAge("");
   };

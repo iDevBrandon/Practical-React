@@ -8,9 +8,9 @@ const UserList = (props) => {
     <div>
       <Card>
         <UserListContainer>
-          {props.users.map((user) => {
-            <UserListItem>{user.age}</UserListItem>;
-          })}
+          {props.users.map((user) => (
+            <UserListItem key={user.id}>{user.age}</UserListItem>
+          ))}
         </UserListContainer>
       </Card>
     </div>
