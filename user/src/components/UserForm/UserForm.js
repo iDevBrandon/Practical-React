@@ -9,7 +9,7 @@ import {
 
 const UserForm = () => {
   const [enteredUsername, setEnteredUsername] = useState("");
-  const [enteredAge, setEnteredAge] = useState(0);
+  const [enteredAge, setEnteredAge] = useState("");
 
   const usernameChangeHandler = (event) => {
     setEnteredUsername(event.target.value);
@@ -21,6 +21,7 @@ const UserForm = () => {
 
   const formSubmitHandler = (event) => {
     event.preventDefault();
+    console.log(enteredUsername, enteredAge);
   };
 
   return (
