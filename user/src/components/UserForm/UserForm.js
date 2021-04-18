@@ -1,7 +1,11 @@
 import React, { useState } from "react";
 import { Button } from "../UI/Button/Button.style";
-import { Card } from "../UI/Card/Card";
-import { UserFormContainer } from "./UserForm.style";
+import { Card } from "../UI/Card/Card.style";
+import {
+  UserFormContainer,
+  UserFormInput,
+  UserFormLabel,
+} from "./UserForm.style";
 
 const UserForm = () => {
   const [enteredUsername, setEnteredUsername] = useState("");
@@ -18,18 +22,22 @@ const UserForm = () => {
   const formSubmitHandler = (event) => {
     event.preventDefault();
   };
-  
+
   return (
     <Card>
       <UserFormContainer onSubmit={formSubmitHandler}>
-        <label>Username</label>
-        <input
+        <UserFormLabel>Username</UserFormLabel>
+        <UserFormInput
           type="text"
           value={enteredUsername}
           onChange={usernameChangeHandler}
         />
-        <label>Age (Years)</label>
-        <input type="number" value={enteredAge} onChange={ageChangeHandler} />
+        <UserFormLabel>Age (Years)</UserFormLabel>
+        <UserFormInput
+          type="number"
+          value={enteredAge}
+          onChange={ageChangeHandler}
+        />
         <Button type="submit">Add User</Button>
       </UserFormContainer>
     </Card>
