@@ -5,9 +5,15 @@ const Login = (props) => {
     <Container>
       <Content>
         <CTA>
-          <CTALogoOne src="/images/cta-logo.png" />
+          <CTALogoOne src="/images/cta-logo-one.png" />
         </CTA>
         <SignUp>Get all there</SignUp>
+        <Description>
+          Get Premier Access to Raya and the Last Dragon for an additional fee
+          with a Disney+ subscription. As of 04/19/21, the price of Disney+ and
+          The Disney Bundle will increase by $1
+        </Description>
+        <CTALogoTwo src="/images/cta-logo-two.jpg" />
         <BgImage />
       </Content>
     </Container>
@@ -90,6 +96,23 @@ const SignUp = styled.a`
   &:hover {
     background-color: #0483ee;
   }
+`;
+
+const Description = styled.p`
+  color: hsla(0, 9%, 95.3%, 1);
+  font-size: 11px;
+  margin: 0 0 24px;
+  line-height: 1.5;
+  letter-spacing: 1.5px;
+`;
+
+const CTALogoTwo = styled.img`
+  max-width: 600px;
+  margin-bottom: 20px;
+  transition: transform 0.4s;
+  display: inline-block;
+  vertical-align: bottom;
+  width: 100%;
 `;
 
 export default Login;
