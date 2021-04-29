@@ -1,0 +1,11 @@
+import styled from "styled-components";
+
+export const Button = styled.button`
+  font: inherit;
+  border: 1px solid #4f005f;
+  background: #4f005f;
+  color: white;
+  padding: 0.25rem 1rem;
+  cursor: pointer;
+  width: fit-content;
+`;
