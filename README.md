@@ -1,6 +1,6 @@
 # Project list
 
-## Project "Slider"
+## Project "Slider" - failed :(
 
 ## LinkedIn project by clever programmer
 
