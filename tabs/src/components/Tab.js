@@ -4,7 +4,7 @@ import { Button, TabContainer } from "./Tab.styles";
 const Tab = () => {
   return (
     <TabContainer>
-      <Button>TOmmy</Button>
+      <Button>Tommy</Button>
       <Button>Big</Button>
       <Button>cuck</Button>
     </TabContainer>

@@ -24,3 +24,23 @@ export const Button = styled.button`
   margin: 0 auto;
   margin-top: 3rem;
 `;
+
+export const JobTitle = styled.small`
+  text-transform: uppercase;
+  color: #617d98;
+  color: #617d98;
+  background: #dae2ec;
+  background: #dae2fe;
+  display: inline-block;
+  padding: 0.375rem 0.75rem;
+  border-radius: 0.25rem;
+  border-radius: 0.2rem;
+`;
+
+export const JobDesc = styled.div`
+  display: flex;
+
+  svg {
+    margin: 1rem;
+  }
+`;
