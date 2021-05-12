@@ -51,6 +51,69 @@ const SignIn = styled.a`
   }
 `;
 
+const Section = styled.section`
+  display: flex;
+  align-content: start;
+  min-height: 700px;
+  padding-top: 40px;
+   position: relative;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1128px;
+  margin: auto;
+  margin-bottom: 1rem;
+  @media (max-width: 768px) {
+    margin: auto;
+    min-height: 0px;
+  }
+`;
+
+const Hero = styled.div`
+  width: 100%;
+  h1 {
+    z-index: 5;
+    padding-bottom: 0;
+    width: 55%;
+    font-size: 3rem;
+    color: #2977c9;
+    font-weight: 200;
+    @media (max-width: 768px) {
+      text-align: center;
+      width: 100%;
+    }
+  }
+
+  img {
+    position: absolute;
+    top: -100px;
+    z-index: -1;
+    width: 100%;
+    @media (max-width: 768px) {
+      top: 230px;
+      position: initial;
+    }
+  }
+`;
+
+const Form = styled.form`
+  margin-top: 100px;
+  width: 300px;
+`;
+
+const Google = styled.button`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  border-radius: 20px;
+  background-color: #fff;
+  width: 100%;
+  height: 50px;
+  img {
+    width: 30px;
+  }
+`;
+
 const Login = (props) => {
   return (
     <Container>
@@ -63,6 +126,18 @@ const Login = (props) => {
           <SignIn>Sign In</SignIn>
         </div>
       </Nav>
+      <Section>
+        <Hero>
+          <h1>Welcome to your professional community.</h1>
+          <img src="/images/hero.jpg" alt="" />
+        </Hero>
+        <Form>
+          <Google>
+            <img src="images/google.png" alt="" />
+            Sign with Google
+          </Google>
+        </Form>
+      </Section>
     </Container>
   );
 };
