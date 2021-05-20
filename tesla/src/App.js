@@ -9,6 +9,7 @@ import {
   Route,
   Redirect,
 } from "react-router-dom";
+import HeaderBlock from "./components/HeaderBlock";
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -18,6 +19,7 @@ function App() {
       <div className="App">
         <Header isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
         {isMenuOpen && <Menu />}
+        <HeaderBlock />
       </div>
     </Router>
   );
