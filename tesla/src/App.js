@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "./App.css";
 import Header from "./components/Header";
+import Menu from "./components/Menu";
+
 import {
   BrowserRouter as Router,
   Switch,
@@ -15,6 +17,7 @@ function App() {
     <Router>
       <div className="App">
         <Header isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
+        {isMenuOpen && <Menu />}
       </div>
     </Router>
   );
