@@ -10,6 +10,8 @@ import {
   Redirect,
 } from "react-router-dom";
 import HeaderBlock from "./components/HeaderBlock";
+import Login from "./components/Login";
+import RoboTaxi from "./components/RoboTaxi";
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -18,10 +20,16 @@ function App() {
     <Router>
       <div className="App">
         <Switch>
-          <Route path="/">
+          <Route exact path="/">
             <Header isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
             {isMenuOpen && <Menu />}
             <HeaderBlock />
+          </Route>
+          <Route path="/login">
+            <Login />
+          </Route>
+          <Route path="/robotaxi">
+            <RoboTaxi />
           </Route>
         </Switch>
       </div>
