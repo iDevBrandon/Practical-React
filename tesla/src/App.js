@@ -12,8 +12,11 @@ import {
 import HeaderBlock from "./components/HeaderBlock";
 import Login from "./components/Login";
 import RoboTaxi from "./components/RoboTaxi";
+import { useSelector } from "react-redux";
+import { selectUser } from "./features/userSlice";
 
 function App() {
+  const user = useSelector(selectUser);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
@@ -26,6 +29,8 @@ function App() {
             <HeaderBlock />
           </Route>
           <Route path="/login">
+            {/* if my user is present, redirect to tesla account page */}
+            {user ? <Redirect to="/teslaaccount" /> : <Login />}
             <Login />
           </Route>
           <Route path="/robotaxi">
