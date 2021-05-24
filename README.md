@@ -1,4 +1,6 @@
-# Project list
+# 100 React projects 
+The examples will be hosted on this link 
+https://100react.netlify.app/
 
 ## Project "Slider" - failed :(
 
