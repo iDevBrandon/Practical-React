@@ -1,7 +1,10 @@
-import Image from "../../components/Image";
 import Review from "../../components/Review";
+import Image from "../../components/Image";
+import Map from "../../components/Map";
+
 import { sanityClient } from "../../sanity";
 import { isMultiple } from "../../utils";
+import Link from "next/link";
 
 export const Property = ({
   title,
@@ -17,7 +20,6 @@ export const Property = ({
   reviews,
 }) => {
   const reviewAmount = reviews.length;
-  console.log(reviewAmount);
   return (
     <div className="container">
       <h1>
@@ -29,13 +31,13 @@ export const Property = ({
       <div className="images-section">
         <Image identifier="main-image" image={mainImage} />
         <div className="sub-images-section">
-          {images.map((_key, image) => (
-            <Image identifier="image" image={image} />
+          {images.map(({ _key, asset }, image) => (
+            <Image key={_key} identifier="image" image={asset} />
           ))}
         </div>
       </div>
       <div className="section">
-        <div className="infomation">
+        <div className="information">
           <h2>
             <b>
               {propertyType} hosted by {host?.name}
@@ -66,25 +68,37 @@ export const Property = ({
             This place isn't suitable for pets and host does not allow parties
             or smoking.
           </p>
-        </div>
-        <div className="price-box">
-          <h2>${pricePerNight}</h2>
-          <h4>
-            {reviewAmount} review{isMultiple(reviewAmount)}
-          </h4>
-          <div className="button" onClick={() => {}}>
-            Change Dates
+
+          <div className="price-box">
+            <h2>${pricePerNight}</h2>
+            <h4>
+              {reviewAmount} review{isMultiple(reviewAmount)}
+            </h4>
+            <Link href="/">
+              <button className="button" onClick={() => {}}>
+                Change Dates
+              </button>
+            </Link>
           </div>
+
+          <hr />
+
+          <h4>{description}</h4>
+          <hr />
+          <h2>
+            {reviewAmount} review{isMultiple(reviewAmount)}
+          </h2>
+          {reviewAmount > 0 &&
+            reviews.map((review) => (
+              <Review key={review._key} review={review} />
+            ))}
+
+          <hr />
+
+          <h2>Location</h2>
+          <Map location={location}></Map>
         </div>
       </div>
-      <hr />
-
-      <h4>{description}</h4>
-      <hr />
-      <h2>
-        {reviewAmount} review{isMultiple(reviewAmount)}
-      </h2>
-      {reviewAmount > 0 && reviews.map((review) => <Review />)}
     </div>
   );
 };
