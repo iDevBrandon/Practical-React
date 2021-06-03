@@ -20,6 +20,10 @@ export const Property = ({
       <h1>
         <b>{title}</b>
       </h1>
+      <p>
+        {reviewAmount} review{isMultiple(reviewAmount)}
+      </p>
+
       <h2>
         <b>
           {propertyType} hosted by {host?.name}
@@ -68,7 +72,7 @@ export const getServerSideProps = async (pageContext) => {
       title,
       location,
       propertyType,
-      mainImage,
+      mainImage, 
       images,
       pricePerNight,
       beds,
