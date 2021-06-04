@@ -1,13 +1,24 @@
 import React from "react";
-import { TodoControlForm } from "./TodoControl.styles";
+import {
+  FormContainer,
+  TodoControlForm,
+  InputForm,
+  ContentForm,
+  NumberForm,
+  InputButton,
+} from "./TodoControl.styles";
 
-const TodoControl = () => {
+const TodoControl = (e) => {
   return (
-    <TodoControlForm>
-      <input type="text" placeholder="content" />
-      <input type="number" placeholder="type number" />
-      <button type="submit">Submit</button>
-    </TodoControlForm>
+    <FormContainer>
+      <TodoControlForm>
+        <InputForm>
+          <ContentForm type="text" placeholder="content" />
+          <NumberForm type="number" placeholder="type number" />
+        </InputForm>
+        <InputButton type="submit">Submit</InputButton>
+      </TodoControlForm>
+    </FormContainer>
   );
 };
 
