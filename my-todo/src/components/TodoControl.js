@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 import {
   FormContainer,
@@ -10,7 +10,14 @@ import {
 } from "./TodoControl.styles";
 
 const TodoControl = (props) => {
-  const [input, setInput] = useState("");
+  const [input, setInput] = useState(props.edit ? props.edit.value : "");
+
+  // to focus on input field
+  const inputRef = useRef(null);
+
+  useEffect(() => {
+    inputRef.current.focus();
+  });
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -19,7 +26,6 @@ const TodoControl = (props) => {
       id: Math.floor(Math.random() * 10000),
       text: input,
     });
-
     setInput("");
   };
 
@@ -28,20 +34,37 @@ const TodoControl = (props) => {
   };
 
   return (
-    <FormContainer>
-      <TodoControlForm onSubmit={handleSubmit}>
-        <InputForm>
-          <ContentInput
-            type="text"
-            placeholder="content"
-            value={input}
-            onChange={handleChange}
-          />
-          <NumberInput type="number" placeholder="type number" />
-        </InputForm>
-        <InputButton type="submit">Submit</InputButton>
-      </TodoControlForm>
-    </FormContainer>
+    <TodoControlForm onSubmit={handleSubmit}>
+      {props.edit ? (
+        <>
+          <InputForm>
+            <ContentInput
+              type="text"
+              placeholder="Update your item"
+              value={input}
+              onChange={handleChange}
+              ref={inputRef}
+            />
+            <NumberInput type="number" placeholder="type number" />
+            <InputButton type="submit">Update</InputButton>
+          </InputForm>
+        </>
+      ) : (
+        <div style={{ display: "flex" }}>
+          <InputForm>
+            <ContentInput
+              type="text"
+              placeholder="content"
+              value={input}
+              onChange={handleChange}
+              ref={inputRef}
+            />
+            <NumberInput type="number" placeholder="type number" />
+            <InputButton type="submit">Submit</InputButton>
+          </InputForm>
+        </div>
+      )}
+    </TodoControlForm>
   );
 };
 
