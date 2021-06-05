@@ -1,13 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import Todo from "./Todo";
+import { TodoListContainer, Todos } from "./TodoList.style";
 
 const TodoList = () => {
   return (
-    <div>
-      <ul>
+    <TodoListContainer>
+      <h1>What's up?</h1>
+      <Todos>
         <Todo />
-      </ul>
-    </div>
+        <Todo />
+        <Todo />
+        <Todo />
+      </Todos>
+    </TodoListContainer>
   );
 };
 

@@ -14,11 +14,11 @@ export const TodoControlForm = styled.form`
   justify-content: center;
 `;
 
-export const ContentForm = styled.input`
+export const ContentInput = styled.input`
   padding: 1rem;
 `;
 
-export const NumberForm = styled.input`
+export const NumberInput = styled.input`
   padding: 1rem;
 `;
 
