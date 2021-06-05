@@ -1,16 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
 import Todo from "./Todo";
 import { TodoListContainer, Todos } from "./TodoList.style";
 
-const TodoList = () => {
+const TodoList = ({ todos }) => {
   return (
     <TodoListContainer>
       <h1>What's up?</h1>
       <Todos>
-        <Todo />
-        <Todo />
-        <Todo />
-        <Todo />
+        {todos.map((todo) => (
+          <Todo todo={todo} key={todo.id} />
+        ))}
       </Todos>
     </TodoListContainer>
   );

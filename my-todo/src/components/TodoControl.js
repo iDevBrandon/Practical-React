@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+
 import {
   FormContainer,
   TodoControlForm,
@@ -10,9 +11,6 @@ import {
 
 const TodoControl = (props) => {
   const [input, setInput] = useState("");
-  const [todos, setTodos] = useState([]);
-
-  
 
   const handleSubmit = (e) => {
     e.preventDefault();

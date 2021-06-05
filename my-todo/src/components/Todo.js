@@ -3,12 +3,12 @@ import { FaTrash } from "react-icons/fa";
 import { MdCheckBoxOutlineBlank } from "react-icons/md";
 import { TodoItem } from "./Todo.styles";
 
-const Todo = () => {
+const Todo = ({ todo }) => {
   return (
     <TodoItem>
       <div className="checkbox">
         <MdCheckBoxOutlineBlank />
-        <p>thing to do </p>
+        <p>{todo.text}</p>
       </div>
       <FaTrash />
     </TodoItem>
