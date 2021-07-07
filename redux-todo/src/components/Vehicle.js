@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from "react-redux";
 const Vehicle = () => {
   const counter = useSelector((state) => state);
   const dispatch = useDispatch();
+  console.log(counter);
   return (
     <div>
       <button onClick={() => dispatch({ type: "CAR" })}>Car</button>
