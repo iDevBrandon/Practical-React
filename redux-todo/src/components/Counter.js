@@ -1,6 +1,13 @@
 import React from "react";
 import { connect } from "react-redux";
 import { Decrement, Increment } from "../actions/counter";
+import store from "../store";
+
+console.log(store.getState());
+
+const unregister = store.subscribe(() =>
+  console.log("State after dispatch:", store.getState())
+);
 
 const Counter = (props) => {
   const increment = () => {
@@ -9,6 +16,7 @@ const Counter = (props) => {
 
   const decrement = () => {
     props.dispatch(Decrement(1));
+    unregister();
   };
 
   return (
