@@ -14,7 +14,7 @@ const AddTransaction = () => {
             Amount <br />
             (negative - positive, positive - negative)
           </label>
-          <input type="number" id="amount" placeholder="Enter amount..." />
+          <input type="number" placeholder="Enter amount..." />
         </div>
       </form>
     </div>
