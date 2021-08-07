@@ -6,7 +6,14 @@ i always wonder the difference between react-google-maps and google-map-react. r
 
 ## Folder structure
 
-L
+Header : A header for the project
+
+Map : A google map in React app
+
+## Map
+
+use "import GoogleMapReact from "google-map-react"" to implement Google Map.
+
 
 ## Ref
 
