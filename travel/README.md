@@ -13,6 +13,9 @@ Map : A google map in React app
 ## Map
 
 use "import GoogleMapReact from "google-map-react"" to implement Google Map.
+Apply own API key to display a map in React app.
+
+## List
 
 
 ## Ref
