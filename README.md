@@ -3,11 +3,8 @@
 The examples will be hosted on this link
 <https://100react.netlify.app/>
 
-## LinkedIn project by clever programmer
 
-<https://www.youtube.com/watch?v=xP3cxbDUtrc>
-
-Upcoming videos
+Upcoming videos.
 
 1. Todo List
 
