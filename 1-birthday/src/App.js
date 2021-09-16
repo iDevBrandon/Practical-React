@@ -8,11 +8,13 @@ function App() {
     SetPerson([]);
   };
   return (
-    <div className="container">
-      <h3>{person.length} birthdays today</h3>
-      <List data={person} />
-      <button onClick={handleClick}>Clear All</button>
-    </div>
+    <main>
+      <section className="container">
+        <h3>{person.length} birthdays today</h3>
+        <List data={person} />
+        <button onClick={handleClick}>Clear All</button>
+      </section>
+    </main>
   );
 }
 
