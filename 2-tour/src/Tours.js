@@ -1,11 +1,11 @@
 import React from "react";
 import Tour from "./Tour";
-const Tours = ({ tours }) => {
+const Tours = ({ tours, filteredTours }) => {
   return (
     <div>
-      {tours.length > 0
-        ? tours.map((tour) => <Tour key={tour.id} tour={tour} />)
-        : "No Tours Left"}
+      {tours.map((tour) => (
+        <Tour key={tour.id} tour={tour} filteredTours={filteredTours} />
+      ))}
     </div>
   );
 };

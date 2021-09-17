@@ -12,31 +12,55 @@ function App() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
+  const filteredTours = (id) => {
+    const newTours = tours.filter((tour) => tour.id !== id);
+    setTours(newTours);
+  };
+  const fetchTours = async () => {
+    try {
+      setError(null);
+      setTours(null);
+      // loading 상태를 true 로 바꿉니다.
+      setLoading(true);
+      const response = await axios.get(`${url}`);
+      setTours(response.data);
+    } catch (error) {
+      setError(error);
+    }
+    setLoading(false);
+  };
+
   useEffect(() => {
-    const fetchTours = async () => {
-      try {
-        setError(null);
-        setTours(null);
-        // loading 상태를 true 로 바꿉니다.
-        setLoading(true);
-        const response = await axios.get(`${url}`);
-        setTours(response.data);
-      } catch (error) {
-        setError(error);
-      }
-      setLoading(false);
-    };
     fetchTours();
   }, []);
 
-  console.log(tours);
+  if (loading) {
+    return (
+      <main>
+        <Loading />
+      </main>
+    );
+  }
 
-  return (
-    <main>
-      <h2>Our Tours</h2>
-      <section>{tours ? <Tours tours={tours} /> : <Loading />}</section>
-    </main>
-  );
+  if (tours.length === 0) {
+    return (
+      <div>
+        <h2>Nothing left</h2>
+        <button className="btn" onClick={() => fetchTours()}>
+          refresh
+        </button>{" "}
+      </div>
+    );
+  } else {
+    return (
+      <main>
+        <h2>Our Tours</h2>
+        <section>
+          <Tours tours={tours} filteredTours={filteredTours} />
+        </section>
+      </main>
+    );
+  }
 }
 
 export default App;
