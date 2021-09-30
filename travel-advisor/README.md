@@ -8,4 +8,6 @@ Install bunch of packages : react-google-maps/api is for the search and google-m
 
 ## Map
 
-sdfsdf
+## List
+
+List of places component
