@@ -22,7 +22,7 @@ function App() {
 
   useEffect(() => {
     console.log(coordinates, bounds);
-
+    // 1:02:39 set bounds value
     getPlacesData(bounds.sw, bounds.ne).then((data) => {
       console.log(data);
       setPlaces(data);
