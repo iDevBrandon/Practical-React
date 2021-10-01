@@ -18,3 +18,8 @@ pass coordinates, setCoordinates, setBounds props to Map.
 
 Main question: how to get the chages of coordinates of the place?
 GoogleReactMap has a function that returns the coordinates of the place.
+
+## Scroll places & Filters
+
+How do we make out list scroll to a specific element on the list?
+=> we will have to use React refs.

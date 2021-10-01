@@ -8,8 +8,12 @@ import { getPlacesData } from "./api/index";
 
 function App() {
   const [places, setPlaces] = useState([]);
+  const [childClicked, setChildClicked] = useState(null);
+
   const [coordinates, setCoordinates] = useState({});
   const [bounds, setBounds] = useState({});
+
+  const [isLoading, setIsLoading] = useState(false);
 
   // set coords autmatically 1:00:10
   useEffect(() => {
@@ -21,13 +25,14 @@ function App() {
   }, []);
 
   useEffect(() => {
-    console.log(coordinates, bounds);
+    setIsLoading(true);
     // 1:02:39 set bounds value
-    console.log(bounds);
+    console.log(coordinates, bounds);
     if (bounds) {
       getPlacesData(bounds.sw, bounds.ne).then((data) => {
         console.log(data);
         setPlaces(data);
+        setIsLoading(false);
       });
     }
   }, [coordinates, bounds]);
@@ -38,13 +43,19 @@ function App() {
       <Header />
       <Grid container spacing={3} style={{ width: "100%" }}>
         <Grid item xs={12} md={4}>
-          <List places={places} />
+          <List
+            places={places}
+            childClicked={childClicked}
+            isLoading={isLoading}
+          />
         </Grid>
         <Grid item xs={12} md={8}>
           <Map
             coordinates={coordinates}
             setCoordinates={setCoordinates}
             setBounds={setBounds}
+            places={places}
+            setChildClicked={setChildClicked}
           />
         </Grid>
       </Grid>
