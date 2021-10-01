@@ -10,7 +10,7 @@ import {
 } from "@ant-design/icons";
 import icon from "../images/crypto_logo.png";
 
-const NavBar = () => {
+const Navbar = () => {
   return (
     <div className="nav-container">
       <div className="logo-container">
@@ -41,4 +41,4 @@ const NavBar = () => {
   );
 };
 
-export default NavBar;
+export default Navbar;

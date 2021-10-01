@@ -1,11 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const CryptoDetails = () => {
-    return (
-        <div>
-            asdfasdfasdf
-        </div>
-    )
-}
+  return <div>asdfasdfasdfasdfasdfasdfdfasdfasdfasdfasdfasdfasdfasf</div>;
+};
 
-export default CryptoDetails
+export default CryptoDetails;
