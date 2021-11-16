@@ -31,3 +31,7 @@ Add suggestions into landing page
 ## 08 | finish layout of landing page
 
 Complete the landing page design
+
+## 09 | create search results component & add react-router
+
+i still use react-router-dom v5 as i'm still not that familiar with v6. 
