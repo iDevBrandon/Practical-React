@@ -11,3 +11,7 @@ filling in top nav component
 ## 03 | finish Yelp's top navigation bar
 
 working on nav bar
+
+## 04 | building out the landing page's search area
+
+adding logo on the main page
