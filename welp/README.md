@@ -27,3 +27,7 @@ added search bar to the main page
 ## 07 | adding search suggestions inside the landing page
 
 Add suggestions into landing page
+
+## 08 | finish layout of landing page
+
+Complete the landing page design
