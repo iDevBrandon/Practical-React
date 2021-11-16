@@ -25,8 +25,8 @@ const SearchBar = () => {
             placeholder="Where you wanna go?"
           />
         </p>
-        <button className={`button is-medium ${styles['search-button']}`}>
-          <span className="icon is-small">🔍</span>
+        <button className={`button is-medium ${styles["search-button"]}`}>
+          <span className={`icon is-small ${styles["search-icon"]}`}>🔍</span>
         </button>
       </div>
     </div>

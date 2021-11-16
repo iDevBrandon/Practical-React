@@ -23,3 +23,7 @@ working on search bar components
 ## 06 | polishing the landing pages' search bar
 
 added search bar to the main page
+
+## 07 | adding search suggestions inside the landing page
+
+Add suggestions into landing page
