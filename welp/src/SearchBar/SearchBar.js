@@ -25,6 +25,9 @@ const SearchBar = () => {
             placeholder="Where you wanna go?"
           />
         </p>
+        <button className={`button is-medium ${styles['search-button']}`}>
+          <span className="icon is-small">🔍</span>
+        </button>
       </div>
     </div>
   );

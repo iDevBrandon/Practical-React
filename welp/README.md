@@ -19,3 +19,7 @@ adding logo on the main page
 ## 05 | building out Yelp's search bar
 
 working on search bar components
+
+## 06 | polishing the landing pages' search bar
+
+added search bar to the main page
