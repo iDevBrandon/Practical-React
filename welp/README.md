@@ -47,3 +47,7 @@ we use a props to pass "small" props so we decide which one should be medium siz
 ## 12 | starting to build Yelp's sub-navigation bar
 
 render sub-nav icons dynamically
+
+## 13 | improve Yelp's sub-navigation bar
+
+Simple border line with props

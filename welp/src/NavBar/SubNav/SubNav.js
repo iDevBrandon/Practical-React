@@ -6,8 +6,8 @@ const SubNav = () => {
     <div>
       <SubNavItem label="Resturant" icon="fa-utensils" />
       <SubNavItem label="Home service" icon="fa-home" />
-      <SubNavItem label="Auto service" icon="fa-truck" />
-      <SubNavItem label="More" icon="fa-truck" />
+      <SubNavItem label="Auto service" icon="fa-car-side" />
+      <SubNavItem label="More" icon="fa-info-circle" showRightBorder/>
     </div>
   );
 };
