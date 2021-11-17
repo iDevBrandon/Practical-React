@@ -59,3 +59,7 @@ match the width siz
 ## 15 | create search results summary component
 
 start buidling the summary section
+
+## 16 | finish search results summary component
+
+Finish the summary section option part
