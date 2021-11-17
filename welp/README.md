@@ -51,3 +51,7 @@ render sub-nav icons dynamically
 ## 13 | improve Yelp's sub-navigation bar
 
 Simple border line with props
+
+## 14 | finalize Yelp's sub-navigation bar
+
+match the width siz
