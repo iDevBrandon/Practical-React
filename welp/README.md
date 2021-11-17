@@ -43,3 +43,7 @@ simple design of nav bar
 ## 11 | finish Yelp's navigation bar
 
 we use a props to pass "small" props so we decide which one should be medium size or not applied.
+
+## 12 | starting to build Yelp's sub-navigation bar
+
+render sub-nav icons dynamically
