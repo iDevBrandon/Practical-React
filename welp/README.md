@@ -63,3 +63,7 @@ start buidling the summary section
 ## 16 | finish search results summary component
 
 Finish the summary section option part
+
+## 17 | start displaying search results
+
+start building each result component (design)
