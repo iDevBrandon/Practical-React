@@ -55,3 +55,7 @@ Simple border line with props
 ## 14 | finalize Yelp's sub-navigation bar
 
 match the width siz
+
+## 15 | create search results summary component
+
+start buidling the summary section
