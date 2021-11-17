@@ -67,3 +67,7 @@ Finish the summary section option part
 ## 17 | start displaying search results
 
 start building each result component (design)
+
+## 18 | improving search result items
+
+positioning the result item
