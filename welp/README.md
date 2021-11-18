@@ -93,3 +93,8 @@ applied useHistory to push the url.
 
 useLocation in Search component
 pass props to Search component
+
+## 24 | exploring Yelp Fusion API with Postman
+
+use bearer token to get the data
+
