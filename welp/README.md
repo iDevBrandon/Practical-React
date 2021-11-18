@@ -75,3 +75,7 @@ positioning the result item
 ## 19 | add ratings and tags to search results
 
 Display the star ratings (design)
+
+## 20 | finish static search results list
+
+CSS work
