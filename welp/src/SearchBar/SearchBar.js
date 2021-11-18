@@ -6,6 +6,10 @@ const SearchBar = (props) => {
   const [location, setLocation] = useState(props.location || "");
 
   const submitHandler = (e) => {
+    if (typeof props.search === "function") {
+      props.search(term, location);
+    }
+
     e.preventDefault();
     console.log(term, location);
   };

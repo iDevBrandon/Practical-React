@@ -83,3 +83,8 @@ CSS work
 ## 21 | submitting forms in the landing page
 
 use useState for term and location to get the user's input and console.log it
+
+## 22 | wiring up landing page and search results list
+
+Proper start!!!
+applied useHistory to push the url.
