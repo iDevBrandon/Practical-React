@@ -106,3 +106,10 @@ working on authentication for FE
 
 working on async/await for fetching.
 A bit complicated but this is an example of custom hook(useBusinessSearch)
+
+* Option 1: *
+I made lambda function that hits the Yelp API endpoint. So you do not need an API key anymore. Simply send a request to
+<https://yelp-backend.netlify.app/.netlify/functions/search?location=berlin&term=burgers>
+
+The location and the term are the values you pull from the form
+
