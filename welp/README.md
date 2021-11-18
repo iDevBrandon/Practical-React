@@ -98,3 +98,7 @@ pass props to Search component
 
 use bearer token to get the data
 
+## 25 | adding networking logic by using the fetch API
+
+
+working on authentication for FE
