@@ -5,6 +5,8 @@ const SearchBar = (props) => {
   const [term, setTerm] = useState(props.term || "");
   const [location, setLocation] = useState(props.location || "");
 
+  console.log(term, location);
+
   const submitHandler = (e) => {
     if (typeof props.search === "function") {
       props.search(term, location);
@@ -27,6 +29,7 @@ const SearchBar = (props) => {
             type="text"
             onChange={(e) => setTerm(e.target.value)}
             placeholder="burgers, spas, handman.."
+            value={term}
           />
         </p>
         <div className="control is-medium">
@@ -38,6 +41,7 @@ const SearchBar = (props) => {
             type="text"
             onChange={(e) => setLocation(e.target.value)}
             placeholder="Where you wanna go?"
+            value={location}
           />
         </p>
         <button

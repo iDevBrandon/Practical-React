@@ -88,3 +88,8 @@ use useState for term and location to get the user's input and console.log it
 
 Proper start!!!
 applied useHistory to push the url.
+
+## 23 | pre-fill search bar in search result list
+
+useLocation in Search component
+pass props to Search component
