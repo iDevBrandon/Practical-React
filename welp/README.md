@@ -100,5 +100,9 @@ use bearer token to get the data
 
 ## 25 | adding networking logic by using the fetch API
 
-
 working on authentication for FE
+
+## 26 | create custom hook to fetch data from Yelp API
+
+working on async/await for fetching.
+A bit complicated but this is an example of custom hook(useBusinessSearch)
