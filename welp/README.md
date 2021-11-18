@@ -113,3 +113,8 @@ I made lambda function that hits the Yelp API endpoint. So you do not need an AP
 
 The location and the term are the values you pull from the form
 
+## 27 | fetch data from Yelp Fusion API using react hooks
+
+set the url "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3";
+click the button <https://cors-anywhere.herokuapp.com/corsdemo>
+so, now i can see 200 response ok
