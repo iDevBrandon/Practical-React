@@ -79,3 +79,7 @@ Display the star ratings (design)
 ## 20 | finish static search results list
 
 CSS work
+
+## 21 | submitting forms in the landing page
+
+use useState for term and location to get the user's input and console.log it
