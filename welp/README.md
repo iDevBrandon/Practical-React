@@ -71,3 +71,7 @@ start building each result component (design)
 ## 18 | improving search result items
 
 positioning the result item
+
+## 19 | add ratings and tags to search results
+
+Display the star ratings (design)

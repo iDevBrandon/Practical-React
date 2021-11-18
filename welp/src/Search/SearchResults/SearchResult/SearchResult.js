@@ -1,4 +1,5 @@
 import React from "react";
+import BusinessRating from "../../../BusinessRating/BusinessRating";
 import styles from "./SearchResult.module.css";
 
 const SearchResult = () => {
@@ -11,13 +12,13 @@ const SearchResult = () => {
       />
       <div className={styles["business-info"]}>
         <h2 className="subtitle">burger place</h2>
-        <p>Rating</p>
+        <BusinessRating />
         <p>
           $$ <span className="tag">Burger</span>{" "}
           <span className="tag">Fast food</span>
         </p>
       </div>
-      <div>
+      <div className={styles["contact-info"]}>
         <p>+44 2362 236235</p>
         <p>Birmingham Int'l airport</p>
       </div>
