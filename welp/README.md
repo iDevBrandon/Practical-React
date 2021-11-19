@@ -118,3 +118,5 @@ The location and the term are the values you pull from the form
 set the url "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3";
 click the button <https://cors-anywhere.herokuapp.com/corsdemo>
 so, now i can see 200 response ok
+
+## 28 | display data from Yelp API in search results
