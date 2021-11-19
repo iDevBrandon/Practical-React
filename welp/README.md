@@ -122,3 +122,11 @@ so, now i can see 200 response ok
 ## 28 | display data from Yelp API in search results
 
 render dynamic data from Yelp API with rating & reviewCount
+
+## 29 | display tags and contact details of businesses
+
+business details
+
+## What i found as an extra
+
+combine the included stackoverflow explanation with the given url property received in the fetch request for the redirect to the yelp page and use the coordinates property to do the same for a google maps api call

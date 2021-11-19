@@ -7,7 +7,18 @@ const SearchResult = ({ businesses }) => {
     return <div />;
   }
 
-  console.log(businesses);
+  // console.log(businesses);
+  const tags = businesses.categories.map((category, index) => (
+    <span
+      className={`tag ${styles["business-tag"]}`}
+      key={businesses.id + businesses.title + index}
+    >
+      {category.title}
+    </span>
+  ));
+  const addressLines = businesses.location.display_address.map(
+    (addressLine, index) => <p key={addressLine.id}>{addressLine}</p>
+  );
 
   return (
     <div className={styles["search-result"]}>
@@ -23,13 +34,12 @@ const SearchResult = ({ businesses }) => {
           rating={businesses.rating}
         />
         <p>
-          $$ <span className="tag">Burger</span>{" "}
-          <span className="tag">Fast food</span>
+          {businesses.price} {tags}
         </p>
       </div>
       <div className={styles["contact-info"]}>
-        <p>+44 2362 236235</p>
-        <p>Birmingham Int'l airport</p>
+        <p>{businesses.display_phone}</p>
+        <p>{addressLines}</p>
       </div>
     </div>
   );
