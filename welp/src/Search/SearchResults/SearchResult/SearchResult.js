@@ -2,17 +2,26 @@ import React from "react";
 import BusinessRating from "../../../BusinessRating/BusinessRating";
 import styles from "./SearchResult.module.css";
 
-const SearchResult = () => {
+const SearchResult = ({ businesses }) => {
+  if (!businesses) {
+    return <div />;
+  }
+
+  console.log(businesses);
+
   return (
     <div className={styles["search-result"]}>
       <img
-        src="https://via.placeholder.com/210"
+        src={businesses.image_url}
         alt="postImage"
         className={styles["business-image"]}
       />
       <div className={styles["business-info"]}>
-        <h2 className="subtitle">burger place</h2>
-        <BusinessRating />
+        <h2 className="subtitle">{businesses.name}</h2>
+        <BusinessRating
+          reviewCount={businesses.review_count}
+          rating={businesses.rating}
+        />
         <p>
           $$ <span className="tag">Burger</span>{" "}
           <span className="tag">Fast food</span>

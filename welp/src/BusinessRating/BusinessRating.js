@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./BusinessRating.module.css";
 import Rating from "react-rating";
 
-const BusinessRating = () => {
+const BusinessRating = ({ reviewCount, rating }) => {
   return (
     <div className={styles.rating}>
       <Rating
@@ -10,9 +10,9 @@ const BusinessRating = () => {
         fullSymbol="fas fa-star"
         fractions={2}
         readonly
-        initialRating={3}
+        initialRating={rating}
       />
-      <p>724 reviews</p>
+      <p>{reviewCount} reviews</p>
     </div>
   );
 };

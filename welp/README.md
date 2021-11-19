@@ -120,3 +120,5 @@ click the button <https://cors-anywhere.herokuapp.com/corsdemo>
 so, now i can see 200 response ok
 
 ## 28 | display data from Yelp API in search results
+
+render dynamic data from Yelp API with rating & reviewCount
