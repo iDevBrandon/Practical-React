@@ -14,11 +14,21 @@ const Search = () => {
   const [businesses, amountResults, searchParams, setSearchParams] =
     useBusinessSearch(term, locationParam);
 
+  function search(term, location) {
+    console.log("calling searchbar");
+    setSearchParams({ term, location });
+  }
+
   return (
     <div>
-      <NavBar term={term} location={locationParam} />
+      <NavBar term={term} location={locationParam} search={search} />
       <SubNav />
-      <SearchResultsSummary term={term} location={locationParam} />
+      <SearchResultsSummary
+        term={searchParams.term}
+        location={searchParams.location}
+        amountResults={amountResults}
+        showResults={businesses ? businesses.length : 0}
+      />
       <SearchResults businesses={businesses} />
     </div>
   );

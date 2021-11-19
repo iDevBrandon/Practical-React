@@ -127,6 +127,11 @@ render dynamic data from Yelp API with rating & reviewCount
 
 business details
 
+## 30 | allow user to perform multiple searches
+
+in search page, make the search bar works after getting "search" props
+SearchParams contains {term: 'burger', location: 'london'}
+
 ## What i found as an extra
 
 combine the included stackoverflow explanation with the given url property received in the fetch request for the redirect to the yelp page and use the coordinates property to do the same for a google maps api call

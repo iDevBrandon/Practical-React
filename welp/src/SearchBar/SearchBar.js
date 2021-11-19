@@ -5,15 +5,11 @@ const SearchBar = (props) => {
   const [term, setTerm] = useState(props.term || "");
   const [location, setLocation] = useState(props.location || "");
 
-  console.log(term, location);
-
   const submitHandler = (e) => {
     if (typeof props.search === "function") {
       props.search(term, location);
     }
-
     e.preventDefault();
-    console.log(term, location);
   };
 
   const sizeClass = props.small ? "" : "is-medium";
