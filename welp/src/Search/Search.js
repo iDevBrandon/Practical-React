@@ -5,9 +5,12 @@ import SearchResultsSummary from "./SearchResultsSummary/SearchResultsSummary";
 import SearchResults from "./SearchResults/SearchResults";
 import { useLocation } from "react-router";
 import { useBusinessSearch } from "../hooks/yelp-api/useBusinessSearch";
+import { useHistory } from "react-router-dom";
 
 const Search = () => {
   let location = useLocation();
+  let history = useHistory();
+
   const params = new URLSearchParams(location.search);
   const term = params.get("find_opin");
   const locationParam = params.get("find_loc");
@@ -15,7 +18,12 @@ const Search = () => {
     useBusinessSearch(term, locationParam);
 
   function search(term, location) {
-    console.log("calling searchbar");
+    // url update
+    const encodedTerm = encodeURI(term);
+    const encodedLocation = encodeURI(location);
+    history.push(
+      `/search?find_opin=${encodedTerm}&find_loc=${encodedLocation}`
+    );
     setSearchParams({ term, location });
   }
 

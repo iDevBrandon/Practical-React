@@ -132,6 +132,10 @@ business details
 in search page, make the search bar works after getting "search" props
 SearchParams contains {term: 'burger', location: 'london'}
 
+## #31 | polishing the application and adding a spinner
+
+url update & adding a spinner
+
 ## What i found as an extra
 
 combine the included stackoverflow explanation with the given url property received in the fetch request for the redirect to the yelp page and use the coordinates property to do the same for a google maps api call
