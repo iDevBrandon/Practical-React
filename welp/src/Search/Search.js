@@ -17,6 +17,10 @@ const Search = () => {
   const [businesses, amountResults, searchParams, setSearchParams] =
     useBusinessSearch(term, locationParam);
 
+  if (!term || !locationParam) {
+    history.push("/");
+  }
+
   function search(term, location) {
     // url update
     const encodedTerm = encodeURI(term);
